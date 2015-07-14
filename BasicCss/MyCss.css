@@ -121,6 +121,7 @@
 	.tabs .tab1 .learn:hover
 	{
 		background-color: #47B56C;
+		border: 1.5px solid green;
 	}
 
 	.tab1 .learn a
