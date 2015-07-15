@@ -1,6 +1,4 @@
-
-
-	.tabs
+.tabs
 	{
 		position: relative;
 		display: block;
@@ -20,7 +18,7 @@
 		height: 20em;
 		width: 55em;
 		left: 0;
-		padding: 10px ;
+		padding: 10px 0 10px 0;
 		border-radius: 5px;
 		z-index: 0;
 		background-color: #E4FFFF;
@@ -112,14 +110,16 @@
 	.tabs .tab1 .con1
 	{
 	
-		margin: 1em 0.5em 1em 1em; 
+		margin: 1em; 
 	
 	}
 
 	.tabs .tab1 .con2
 	{
 	
-		margin: 1em 1em 1em 0.5em; 
+		margin: 1em ;
+		position: absolute;
+		left: 49%; 
 	
 	}
 
@@ -132,7 +132,7 @@
 		width: 10em;
 		height: 2em;
 		text-align: center;
-		background-color: #56a200;
+		background-color: green;
 		line-height: 2em;
 		text-shadow:2px 1px black 2px;
 
@@ -158,7 +158,7 @@
 	{
 		padding-left: 1em;
 		font-weight: bold;
-		font-size: 22px;
+		font-size: 1.5em;
 		font-family: sans-serif;
 		color: #757575;
 	}
@@ -169,7 +169,8 @@
 		text-align: justify;
 		padding-left: 1.5em;
 		padding-right: 1.5em;
-		font-size: 13.81px;	
+		font-weight: 400;
+		font-size: 1.0em;	
 		color: #6e6e6e;
 	}
 
@@ -179,7 +180,7 @@
 		padding: 1.5em;
 		padding-top:0em;
 		font-weight: 500;
-		font-size: 13.81px;
+		font-size: 1.2em;
 		color: #1b6bce;
 	}
 
@@ -188,5 +189,3 @@
 		padding:0em 2em 1em 2em;
 
 	}
-
-	
