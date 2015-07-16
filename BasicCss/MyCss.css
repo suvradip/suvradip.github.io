@@ -1,11 +1,11 @@
 	@font-face {
-    font-family: OpenSans-Semibold;
-    src: url(fonts/OpenSans-Semibold.ttf);
+    		font-family: OpenSans-Semibold;
+    		src: url(fonts/OpenSans-Semibold.ttf);
 	}
 
 	@font-face {
-    font-family: OpenSans-Regular;
-    src: url(fonts/OpenSans-Regular.ttf);
+    		font-family: OpenSans-Regular;
+    		src: url(fonts/OpenSans-Regular.ttf);
 	}
 
 	body
@@ -42,7 +42,7 @@
 	
 	.tabs .tab1
 	{
-	z-index: 1;
+		z-index: 1;
 	}
 
 	.tabs div h2
