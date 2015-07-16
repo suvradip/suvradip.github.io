@@ -1,29 +1,29 @@
 
 var int1, int2, int3;
-		 
+         
 function tabToggle(x)
 {
-	
-	if(x==1)
-	{	
-	document.getElementById("x1").style.zIndex = "0";
-	document.getElementById("x2").style.zIndex = "1";
-	document.getElementById("tab1_h2").style.backgroundColor = "#FFFFFF";
-	document.getElementById("tab2_h2").style.backgroundColor = "#E4EFFF";
-	document.getElementById("tab1_h2_a").style.color = "#717171";
-	document.getElementById("tab2_h2_a").style.color = "#09569d";
-	}
-	else
-	{
-	document.getElementById("x1").style.zIndex = "1";
-	document.getElementById("x2").style.zIndex = "0";
-	document.getElementById("tab1_h2").style.backgroundColor = "#E4EFFF";
-	document.getElementById("tab2_h2").style.backgroundColor = "#FFFFFF";
-	document.getElementById("tab1_h2_a").style.color = "#09569d";
-	document.getElementById("tab2_h2_a").style.color = "#717171";
-	
-	}
-}	
+    
+    if(x==1)
+    {   
+    document.getElementById("x1").style.zIndex = "0";
+    document.getElementById("x2").style.zIndex = "1";
+    document.getElementById("tab1_h2").style.backgroundColor = "#FFFFFF";
+    document.getElementById("tab2_h2").style.backgroundColor = "#E4EFFF";
+    document.getElementById("tab1_h2_a").style.color = "#717171";
+    document.getElementById("tab2_h2_a").style.color = "#09569d";
+    }
+    else
+    {
+    document.getElementById("x1").style.zIndex = "1";
+    document.getElementById("x2").style.zIndex = "0";
+    document.getElementById("tab1_h2").style.backgroundColor = "#E4EFFF";
+    document.getElementById("tab2_h2").style.backgroundColor = "#FFFFFF";
+    document.getElementById("tab1_h2_a").style.color = "#09569d";
+    document.getElementById("tab2_h2_a").style.color = "#717171";
+    
+    }
+}   
 
 
 function numbercheck(e)
@@ -48,9 +48,9 @@ function cbchange(cb) {
 function checkboxValue(cb1,cb2,cb3)
 {
     
-	int1="";
-	int2="";
-	int3="";
+    int1="";
+    int2="";
+    int3="";
 
     if (cb1.checked == true)
     {
@@ -77,7 +77,7 @@ function radioCheckedValue(rname)
     for (i=0; i < test.length; i++)
      {
         if(test[i].checked==true) 
-        return test[i].value;   		 
+        return test[i].value;            
     }
 }
 
@@ -87,29 +87,26 @@ function getData()
 
 //checking textboxe values
 if(document.getElementById("name").value!="" && document.getElementById("email").value!=""  && document.getElementById("country").selectedIndex!=0 && document.getElementById("address").value!=""  )
-		{
+        {
 
-			//gets the all value from text boxes	
-			var n=document.getElementById("name").value;
-			var e=document.getElementById("email").value;
+            //gets the all value from text boxes    
+            var n=document.getElementById("name").value;
+            var e=document.getElementById("email").value;
             var p=document.getElementById("phone").value;
-			var ele = document.getElementById("country");
-			var c = ele.options[ele.selectedIndex].text;
+            var ele = document.getElementById("country");
+            var c = ele.options[ele.selectedIndex].text;
 
-            var s=ele.options[document.getElementById("state").selectedIndex].text;
+           // var s=ele.options[document.getElementById("state").selectedIndex].text;
 
-			var a=document.getElementById("address").value;
-			var cb1=document.getElementById("cb1");
-			var cb2=document.getElementById("cb2");
-			var cb3=document.getElementById("cb3");
+            var a=document.getElementById("address").value;
+            var cb1=document.getElementById("cb1");
+            var cb2=document.getElementById("cb2");
+            var cb3=document.getElementById("cb3");
 
-			//checkboxValue(cb1,cb2,cb3);
+            //checkboxValue(cb1,cb2,cb3);
 
-			var gender =  radioCheckedValue("sex");
-			
-
-            console.log(s + "he");
-
+            var gender =  radioCheckedValue("sex");
+            
             var cb1=document.getElementById("cb1");
             var cb2=document.getElementById("cb2");
             var cb3=document.getElementById("cb3");
@@ -156,21 +153,21 @@ if(document.getElementById("name").value!="" && document.getElementById("email")
             }
 
             //storing this data in Jason 
-    		var data=({
-						"name":n,
-						"email":e,
+            var data=({
+                        "name":n,
+                        "email":e,
                         "phone":p,
-						"country":c,
-						"address":a,
-						"sex":gender,
-						"games":games,
-						"movies":movies,
-						"reading":reading
+                        "country":c,
+                        "address":a,
+                        "sex":gender,
+                        "games":games,
+                        "movies":movies,
+                        "reading":reading
 
-    				});
+                    });
 
-				console.log(JSON.stringify(data));
-		}
+                console.log(JSON.stringify(data));
+        }
 
 
 }
@@ -179,75 +176,75 @@ if(document.getElementById("name").value!="" && document.getElementById("email")
 
 function overlay(cb) 
 {
-	el = document.getElementById("overlay");
-	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-	
-	var cb1_sub=document.getElementById("cb1_sub")
-	var cb2_sub=document.getElementById("cb2_sub")
-	var cb3_sub=document.getElementById("cb3_sub")
+    el = document.getElementById("overlay");
+    el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+    
+    var cb1_sub=document.getElementById("cb1_sub")
+    var cb2_sub=document.getElementById("cb2_sub")
+    var cb3_sub=document.getElementById("cb3_sub")
 
 
 
 
 
-	if(cb==1)
-	{
-		cb1_sub.style.display="block";
-		cb2_sub.style.display="none";
-		cb3_sub.style.display="none";
+    if(cb==1)
+    {
+        cb1_sub.style.display="block";
+        cb2_sub.style.display="none";
+        cb3_sub.style.display="none";
 
-		
-		if(document.getElementById("cb1_sub_1").checked==true || document.getElementById("cb1_sub_2").checked==true || document.getElementById("cb1_sub_3").checked==true)
-		document.getElementById("cb1").checked=true;
-		
-	}
+        
+        if(document.getElementById("cb1_sub_1").checked==true || document.getElementById("cb1_sub_2").checked==true || document.getElementById("cb1_sub_3").checked==true)
+        document.getElementById("cb1").checked=true;
+        
+    }
 
-	if(cb==2)
-	{
-		cb1_sub.style.display="none";
-		cb2_sub.style.display="block";
-		cb3_sub.style.display="none";
+    if(cb==2)
+    {
+        cb1_sub.style.display="none";
+        cb2_sub.style.display="block";
+        cb3_sub.style.display="none";
 
-		if(document.getElementById("cb2_sub_1").checked==true || document.getElementById("cb2_sub_2").checked==true || document.getElementById("cb2_sub_3").checked==true)
-		document.getElementById("cb2").checked=true;
-		
-	}
+        if(document.getElementById("cb2_sub_1").checked==true || document.getElementById("cb2_sub_2").checked==true || document.getElementById("cb2_sub_3").checked==true)
+        document.getElementById("cb2").checked=true;
+        
+    }
 
-	if(cb==3)
-	{
-		cb1_sub.style.display="none";
-		cb2_sub.style.display="none";
-		cb3_sub.style.display="block";
+    if(cb==3)
+    {
+        cb1_sub.style.display="none";
+        cb2_sub.style.display="none";
+        cb3_sub.style.display="block";
 
-		if(document.getElementById("cb3_sub_1").checked==true || document.getElementById("cb3_sub_2").checked==true || document.getElementById("cb3_sub_3").checked==true)
-		document.getElementById("cb3").checked=true;
-		
-	}
+        if(document.getElementById("cb3_sub_1").checked==true || document.getElementById("cb3_sub_2").checked==true || document.getElementById("cb3_sub_3").checked==true)
+        document.getElementById("cb3").checked=true;
+        
+    }
 
-	
+    
 }
 
 
 function cbcheck()
 {
 
-		if(document.getElementById("cb1_sub_1").checked==true || document.getElementById("cb1_sub_2").checked==true || document.getElementById("cb1_sub_3").checked==true)
-		  document.getElementById("cb1").checked=true;
-		else
-		  document.getElementById("cb1").checked=false;	
-		
+        if(document.getElementById("cb1_sub_1").checked==true || document.getElementById("cb1_sub_2").checked==true || document.getElementById("cb1_sub_3").checked==true)
+          document.getElementById("cb1").checked=true;
+        else
+          document.getElementById("cb1").checked=false; 
+        
 
-		if(document.getElementById("cb2_sub_1").checked==true || document.getElementById("cb2_sub_2").checked==true || document.getElementById("cb2_sub_3").checked==true)
-		  document.getElementById("cb2").checked=true;
-		else
-		  document.getElementById("cb2").checked=false;	
-	
-		
-		if(document.getElementById("cb3_sub_1").checked==true || document.getElementById("cb3_sub_2").checked==true || document.getElementById("cb3_sub_3").checked==true)
-		  document.getElementById("cb3").checked=true;
-		else
-		  document.getElementById("cb3").checked=false;	
-		
+        if(document.getElementById("cb2_sub_1").checked==true || document.getElementById("cb2_sub_2").checked==true || document.getElementById("cb2_sub_3").checked==true)
+          document.getElementById("cb2").checked=true;
+        else
+          document.getElementById("cb2").checked=false; 
+    
+        
+        if(document.getElementById("cb3_sub_1").checked==true || document.getElementById("cb3_sub_2").checked==true || document.getElementById("cb3_sub_3").checked==true)
+          document.getElementById("cb3").checked=true;
+        else
+          document.getElementById("cb3").checked=false; 
+        
 }
 
 var states = new Array(2) 
