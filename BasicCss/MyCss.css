@@ -61,26 +61,24 @@
 
 	}
 
+	.tabs h2
+	{
+		border-right: 1px solid #dddddd;
+		border-top: 1px solid #dddddd;
+		border-left: 1px solid #dddddd;
+	}
+
 	.tabs .tab1 h2
 	{
-		/*border: 1px solid;*/
-		/*background-color: #FFFFFF;*/
+	
 		background-color: #E4EFFF; 
-		border-right: 1px solid #BECDEE;
-		border-top: 1px solid #BECDEE;
-		border-left: 1px solid #BECDEE;
-		
-
+	
 	}
 
 	.tabs .tab2 h2
 	{
 		left: 145px;
 		background-color: #FFFFFF;
-		border-right: 1px solid #BECDEE;
-		border-top: 1px solid #BECDEE; 
-		border-left: 1px solid #BECDEE;
-
 	}
 
 	.tabs  h2 a
