@@ -257,6 +257,7 @@
 {
 	position: absolute;
 	top:93.5%;
+	left: 80%;	
 	width: 7em;
 	height: 2em; 
 	text-align: center;
@@ -270,21 +271,42 @@
 		
 }
 
-
-.tab2 .subscribe
-{
-	left: 80%;	
-}
-
-.tab2 .reset
-{
-
-	left: 64%;	
-}
-
-.tab2 .subscribe, .reset:hover
+.tab2 .subscribe:hover
 {
 	background-color: #47B56C;
 	outline: 1.5px solid green;
 }
 
+
+.tab2 .reset
+{
+	position: absolute;
+	top:93.5%;
+	left: 64%;	
+	width: 7em;
+	height: 2em; 
+	text-align: center;
+	background-color: #56a200;
+	line-height: 2em;
+	font-size: 18px;
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+.tab2 .reset:hover
+{
+	background-color: #47B56C;
+	outline: 1.5px solid green;
+}
+
+
+
+#msg
+{
+	position: relative;
+	border: 1px solid;
+	width: 5%;
+	height: 2%;
+}
