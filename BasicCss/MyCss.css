@@ -59,13 +59,10 @@
 		text-align: center;
 		border-radius: 3px 3px 0px 0px;
 
-	}
-
-	.tabs h2
-	{
 		border-right: 1px solid #dddddd;
 		border-top: 1px solid #dddddd;
 		border-left: 1px solid #dddddd;
+
 	}
 
 	.tabs .tab1 h2
@@ -256,11 +253,10 @@
 	font-family: OpenSans-Regular;
 }
 
-.tab2 .subscribe
+.tab2 .subscribe, .reset 
 {
 	position: absolute;
 	top:93.5%;
-	left: 80%;	
 	width: 7em;
 	height: 2em; 
 	text-align: center;
@@ -274,42 +270,21 @@
 		
 }
 
-.tab2 .subscribe:hover
-{
-	background-color: #47B56C;
-	outline: 1.5px solid green;
-}
 
+.tab2 .subscribe
+{
+	left: 80%;	
+}
 
 .tab2 .reset
 {
-	position: absolute;
-	top:93.5%;
+
 	left: 64%;	
-	width: 7em;
-	height: 2em; 
-	text-align: center;
-	background-color: #56a200;
-	line-height: 2em;
-	font-size: 18px;
-	color: #FFFFFF;
-	outline: none;
-	border: none;
-	text-decoration: none;
 }
 
-.tab2 .reset:hover
+.tab2 .subscribe, .reset:hover
 {
 	background-color: #47B56C;
 	outline: 1.5px solid green;
 }
 
-
-
-#msg
-{
-	position: relative;
-	border: 1px solid;
-	width: 5%;
-	height: 2%;
-}
