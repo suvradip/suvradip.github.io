@@ -61,15 +61,14 @@ function create(sign)
 	   input.type="text";
 	   input.id=i;
 	   input.onkeypress=function() {
-	   									return numbercheck(event);
-		  							  
-								   };
+	   				return numbercheck(event);
+		  		       };
 
 
 		input.onkeyup=function(){
-									rtl(this);
-									checkResult(this.id);
-								};
+					 rtl(this);
+					 checkResult(this.id);
+					};
 
 		/*var plus=document.createElement("span");
 		plus.className="plus";
