@@ -231,3 +231,22 @@ function memoryOperation(op)
       }
 
 }
+
+
+function isNumberKey(e)
+ {
+   
+    var unicode=e.charCode? e.charCode : e.keyCode
+   
+    if (unicode!=8)//if the key isn't the backspace key (which we should allow)
+    { 
+        if (unicode>45 && unicode <57) //if not a number
+            return true ;
+        else if(unicode==42 || unicode==43)
+            return true ;
+        else 
+            return false;  
+         
+    }
+
+}
