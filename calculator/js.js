@@ -157,7 +157,7 @@ function clearTbx()
 function cancel()
 {
  var t=document.getElementById('textbox').value;
- var pos=0, s="";
+/* var pos=0, s="";
  for(var i=t.length;i>0;i--)
  {
    if(t[i]=="+" || t[i]=="*" || t[i]=="-" || t[i]=="/")
@@ -172,7 +172,9 @@ function cancel()
   s+=t[i];
  }
 
-document.getElementById('textbox').value=s;
+document.getElementById('textbox').value=s;*/
+
+document.getElementById('textbox').value=t.substring(0,t.length -1);
 
 }
 
