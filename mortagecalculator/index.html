@@ -22,13 +22,13 @@
 	
 
 function numbers(e){
-	    var unicode=e.charCode? e.charCode : e.keyCode
+	    var unicode=e.charCode? e.charCode : e.keyCode;
 	    if (unicode!=8 || unicode!=46){ //if the key isn't the backspace key (which we should allow)
 	        if(unicode == 46){// if a decimal point
-	        	return true
+	        	return true;
 	        }
 	        if (unicode<48||unicode>57) //if not a number
-	            return false //disable key press
+	            return false ;//disable key press
 	   	}
 	}
 
@@ -51,14 +51,14 @@ function myCalculation()
 
 
 	//condition for calculate EMI
-	if(p.length!=0 && t.length!=0 && r.length!=0 )
+	if(p.length!==0 && t.length!==0 && r.length!==0 )
 		{
 			
 			document.getElementById('emi').value= Math.round(p * r * Math.pow((1+r),t)/ ((Math.pow((1+r),t))-1));
 		}
 
 		//condtion for calculate Princile or Loan Amount
-		else if(r.length!=0 && t.length!=0 && e.length!=0)
+		else if(r.length!==0 && t.length!==0 && e.length!==0)
 		 {
 			document.getElementById('loan').value = Math.round(e * ((Math.pow(1+r,t))-1)/(r*(Math.pow((1+r),t)))); 
 		 }
