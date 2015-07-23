@@ -2,7 +2,21 @@
 <html>
 <head>
 
+<style type="text/css">
+	
 
+	body
+	{
+		margin: 0;
+	}
+
+	div
+	{
+		margin: 10% 30%;
+		width: 100%;
+	}
+
+</style>
 
 <script type="text/javascript">
 	
@@ -21,8 +35,14 @@ function numbers(e){
 
 function myCalculation()
 {
+	//at first clearing the Error Message.
+	document.getElementById('msg').innerHTM="";
+
+	//Getting all the values from input text field
 	var p=document.getElementById('loan').value;
-	var r=document.getElementById('myrete').value / 1200;
+
+	
+	var r=document.getElementById('myrete').value / 1200; // User gives the input as month per Interes, so i convert it years per interest
 	var t=document.getElementById('time').value;
 	var e=document.getElementById('emi').value;
 
@@ -30,32 +50,40 @@ function myCalculation()
 
 
 
-
+	//condition for calculate EMI
 	if(p.length!=0 && t.length!=0 && r.length!=0 )
 		{
-			console.log("emi result condition");
+			
 			document.getElementById('emi').value= Math.round(p * r * Math.pow((1+r),t)/ ((Math.pow((1+r),t))-1));
 		}
+
+		//condtion for calculate Princile or Loan Amount
 		else if(r.length!=0 && t.length!=0 && e.length!=0)
 		 {
-			console.log("Principle amount result condition");
 			document.getElementById('loan').value = Math.round(e * ((Math.pow(1+r,t))-1)/(r*(Math.pow((1+r),t)))); 
+		 }
 
-		}
+		 //condtion for calculate Time.
 		else if(p.length!=0 && r.length!=0 && e.length!=0)
 		 {
-		 	console.log("Time result condition");
-			document.getElementById('time').value = Math.round((Math.log((e)/(e-(p*r))))/(Math.log(1+r))); 
+		 	var res=Math.round((Math.log((e)/(e-(p*r))))/(Math.log(1+r))); 
+
+		 	////condtion, if time becomes Very big.
+		 	if(isNaN(res))	
+			document.getElementById('msg').innerHTML ="can't possible."; 
+			else
+			document.getElementById('time').value =res; 	
 		}
 		else
 		{
-			console.log("error");
 			document.getElementById('msg').innerHTML = 'Incorrenct Data Given, Please correct it then calculate!!';	
 		}
 
 }
 
 
+
+// to reset all fields
 function reset()
 {
 	var p=document.getElementById('loan').value="";
@@ -71,7 +99,7 @@ function reset()
 
 <div>
 
-	<table border="1">
+	<table border="0">
 		
 
 	<tr>
