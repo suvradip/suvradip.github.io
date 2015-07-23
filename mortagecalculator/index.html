@@ -64,9 +64,9 @@ function myCalculation()
 		 }
 
 		 //condtion for calculate Time.
-		else if(p.length!=0 && r.length!=0 && e.length!=0)
+		else if(p.length!==0 && r.length!==0 && e.length!==0)
 		 {
-		 	var res=Math.round((Math.log((e)/(e-(p*r))))/(Math.log(1+r))); 
+		 	var res=Math.ceil((Math.log((e)/(e-(p*r))))/(Math.log(1+r))); 
 
 		 	////condtion, if time becomes Very big.
 		 	if(isNaN(res))	
