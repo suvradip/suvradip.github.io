@@ -2,9 +2,7 @@
 <html>
 <head>
 
-<style type="text/css">
-	
-</style>
+
 
 <script type="text/javascript">
 	
@@ -55,11 +53,15 @@ function myCalculation()
 			document.getElementById('msg').innerHTML = 'Incorrenct Data Given, Please correct it then calculate!!';	
 		}
 
+}
 
 
-
-
-
+function reset()
+{
+	var p=document.getElementById('loan').value="";
+	var r=document.getElementById('myrete').value="";
+	var t=document.getElementById('time').value="";
+	var e=document.getElementById('emi').value="";
 }
 
 </script>
@@ -68,7 +70,6 @@ function myCalculation()
 <body>
 
 <div>
-
 
 	<table border="1">
 		
@@ -94,6 +95,7 @@ function myCalculation()
 
 	<tr>
 		<td ><input type="submit" value="Calculate" onclick="myCalculation();" /></td>
+		<td><input type="submit" value="Reset" onclick="reset();"/></td>
 		<td><span id="msg"></span></td>
 	</tr>
 
